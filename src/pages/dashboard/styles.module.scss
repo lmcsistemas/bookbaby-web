@@ -1,0 +1,28 @@
+.TableAgenda {
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    
+  table {
+      margin-top: 40px;
+    border: 0;
+    width: 1120px;
+    
+  }
+    
+  th {
+    
+    height: 45px;
+    color: #fff;
+    background-color: var(--verde-escuro);
+  }
+    
+  td {
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding: 5px 0px;
+  }
+}

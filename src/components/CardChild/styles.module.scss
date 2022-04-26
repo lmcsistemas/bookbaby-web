@@ -1,0 +1,20 @@
+.card{
+    background-color: aliceblue;    
+    width: 40%;
+    
+    border-radius: 7px;
+    border:1px solid Var(--verde-escuro);
+    text-align: center;
+}
+
+.nomeCrianca{
+    color:var(--verde-escuro);
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px 0
+}
+
+.dataNasc{
+    font-size: 12px;
+    margin: 10px 0
+}

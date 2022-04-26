@@ -1,0 +1,52 @@
+import { GetServerSideProps, GetServerSidePropsContext, GetServerSidePropsResult } from 'next';
+import { parseCookies, destroyCookie } from 'nookies';
+import { AuthTokenError } from '../services/AuthTokenError';
+
+//funcao para pagina de acesso somente logados
+export function onlyAuth<P>(fn: GetServerSideProps<P>){
+    return async (ctx: GetServerSidePropsContext): Promise<GetServerSidePropsResult<P>> =>{
+
+        const cookies = parseCookies(ctx);
+
+        const token = cookies['@nextauth.token'];
+
+        if(!token){
+            return{
+                redirect:{
+                    destination:'/',
+                    permanent:false
+                }
+            }
+        }
+
+        try{
+            return await fn(ctx);
+        }catch(err){
+            if(err instanceof AuthTokenError){
+                destroyCookie(ctx, '@nextauth.token');
+
+                return{
+                    redirect:{
+                        destination:'/',
+                        permanent:false
+                    }
+                }
+
+            }
+        }
+
+
+        //Se acessa tem que redirecionar para uma rota de logado. pois somente usuário não logados podem acessar.
+        if(cookies['@nextauth.token']){
+            return{
+                redirect:{
+                    destination:'/dashboard',
+                    permanent:false
+                }
+            }
+        }
+
+        return await fn(ctx);
+    }
+
+}

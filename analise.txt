@@ -1,0 +1,48 @@
+
+
+Para usuário nivel 
+escola
+->pode fazer cadastro de crianca
+->tem os menus de agenda, crianca,mensagem e pais
+-para fazer cadastro de agenda, msg, tem que buscar a criança primeiro 
+-faz a atribuição de criança ao pais
+-ao cadastrar um pai verificar se o mesmo já não esta cadastrada. 
+-no cadastro de usuário pesquisar/listar por nivel de usuário.
+-> Amanhã fazer menus de acordo com o nivel, fazer as pesquisas(APIs e telas) junto com a lista e botão cadastrar 
+Exemplo clicou no agenda com esse nível mostrar o form de pesquisa
+
+
+
+PAis
+- para fazer cadastro de agenda, msg, é listado as criança relacionadas aos pais 
+- pode atualizar os dados da criança. 
+- nas telas de mensagem e agenda 
+Exemplo clicou no agenda com esse nível mostrar uma tabela com as criança desse
+
+Notificação
+na api ao cadastrar um agenda ou mensagem verificar o usuário que esta cadastrando ser foi pais(avisar a escola) ser for escola avisar o pais
+
+
+
+
+
+
+Criança 
+    Nivel escola
+        Pesquisa por nome ou cpf 
+        Editar cadastro 
+        Cadastrar Novo
+
+    Nível Pais 
+        Lista as Criancas do pai
+        Editar cadastro 
+Agenda
+    Editar um agenda PUT
+
+    
+
+26/04
+FAzer o service para criança e colocar as funções de update e create dentro dele. 
+checar os demais itens já desenvolvido. 
+Fazer o crud de mensagem 
+fazer o dashboard com mensagens e agendas. 

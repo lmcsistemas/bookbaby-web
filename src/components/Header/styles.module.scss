@@ -1,0 +1,42 @@
+.headerContainer{
+    height: 5rem;
+}
+
+.headerContent{
+    max-width: 1120px;
+    height: 5rem;
+    margin:0 auto;
+    padding: 0 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img{
+        cursor:pointer
+    }
+
+}
+
+.menuNav{
+    display: flex;
+    align-items: center;
+
+    a{
+        color:var(--verde-escuro);
+        padding: 0 0.5rem;
+        display: inline-block;
+        position: relative;
+        font-weight: bold;
+
+        & + a{
+            margin-left: 2rem;
+        }
+
+        &:hover{
+            color:var(--gray-100)
+        }
+    }
+
+    
+}
