@@ -97,7 +97,7 @@ export default function Cadastrar(){
             <title>Agenda - Cadastro</title>                
         </Head>       
         <Header/>
-        <PesquisaCrianca rota=""/>
+        <PesquisaCrianca rota="" btnCadastrar={false} rotaCadastrar=""/>
         <div className={styles.container}>                
             {(criancaCadastrar != '') ?
             <>
